@@ -1,13 +1,13 @@
 ## More Tech 4.0 Backend
 
-### Шаг 1) Требования
+### Шаг 1. Требования
 
-- Linux (Ubuntu)
-- Python 3.5+
-- PostgreSQL
+- Linux (Ubuntu);
+- Python 3.5+;
+- PostgreSQL.
 
-### Шаг 2) Установка
-Введите в psql:
+### Шаг 2. Установка
+Введите в `psql`:
 
 ```
 CREATE DATABASE more_tech4;
@@ -27,12 +27,13 @@ PYTHONPATH=$PWD ./venv/bin/python common/init.py
 ```
 
 
-### Шаг 3) Настройка
+### Шаг 3. Настройка
 
-Просмотрите и отредактируйте `src/config.py`
+Просмотрите и отредактируйте файлы:
+- `src/config.py`
+- `common/mt-backend.service`
 
-Просмотрите и отредактируйте `common/mt-backend.service`
-
+Введите в терминале:
 ```
 sudo cat common/mt-backend.service > /usr/lib/systemd/system/mt-backend.service
 sudo systemctl daemon-reload
@@ -40,4 +41,4 @@ sudo systemctl enable mt-backend.service
 sudo systemctl start mt-backend.service
 ```
 
-Также на нашем сервере настроен Nginx и SSL, но делать это необязательно
+Также на нашем сервере настроены Nginx и SSL, но делать это необязательно
